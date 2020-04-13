@@ -655,7 +655,7 @@ auto pWindow::_synchronizeState() -> void {
   auto display = XOpenDisplay(nullptr);
   s32 screen = DefaultScreen(display);
   auto window = GDK_WINDOW_XID(gtk_widget_get_window(widget));
-  XlibAtom wmState = XInternAtom(display, "_NET_WM_STATE", XlibTrue);
+  XlibAtom wmState = XInternAtom(display, "_NET_WM_STATE", XlibFalse);
   XlibAtom atom;
   s32 format;
   unsigned long items, after;
